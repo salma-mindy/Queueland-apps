@@ -1,12 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:queueland/components/default_button.dart';
+import '../../../components/default_button.dart';
 import 'package:queueland/constants.dart';
 import 'package:queueland/screens/sign_in/sign_in_screen.dart';
 import 'package:queueland/size_config.dart';
 import '../components/splash_content.dart';
-import 'package:queueland/screens/splash/components/splash_content.dart';
 
 class Body extends StatefulWidget {
   @override
