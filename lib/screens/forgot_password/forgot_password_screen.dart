@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:queueland/screens/sign_in/components/body.dart';
+import './components/body.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   static String routeName = "/forgot_password";
@@ -7,7 +7,7 @@ class ForgotPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Forgot Password"),
+        title: Text("Réinitialisation de mot de passe"),
       ),
       body: Body(),
     );

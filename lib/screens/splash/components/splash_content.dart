@@ -15,9 +15,9 @@ class SplashContent extends StatelessWidget {
       children: <Widget>[
         Spacer(),
         Text(
-          "QueueLand Manager",
+          "QLM",
           style: TextStyle(
-            fontSize: getProportionateScreenWidth(16),
+            fontSize: getProportionateScreenWidth(30),
             color: kPrimaryColor,
             fontWeight: FontWeight.bold,
           ),

@@ -1,7 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:queueland/components/no_account_text.dart';
-import 'package:queueland/components/socal_card.dart';
+import 'package:queueland/constants.dart';
+//import 'package:queueland/components/socal_card.dart';//
 import 'package:queueland/screens/sign_in/components/sign_form.dart';
 import 'package:queueland/size_config.dart';
 import 'sign_form.dart';
@@ -21,40 +22,16 @@ class Body extends StatelessWidget {
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.04),
                 Text(
-                  "Welcome Back",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: getProportionateScreenWidth(28),
-                    fontWeight: FontWeight.bold,
-                  ),
+                  "Bienvenue",
+                  style: headingStyle,
                 ),
                 Text(
-                  "Connectez-vous avec votre nom et votre mot de passe",
+                  "Veuillez vous connecter avec votre numero et votre mot de passe",
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: SizeConfig.screenHeight * 0.08),
+                SizedBox(height: SizeConfig.screenHeight * 0.04),
                 SignForm(),
-                SizedBox(height: SizeConfig.screenHeight * 0.08),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SocalCard(
-                      icon: "assets/icons/google-icon.svg",
-                      press: () {},
-                    ),
-                    SocalCard(
-                      icon: "assets/icons/facebook-2.svg",
-                      press: () {},
-                    ),
-                    SocalCard(
-                      icon: "assets/icons/twitter.svg",
-                      press: () {},
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: getProportionateScreenHeight(20),
-                ),
+                SizedBox(height: SizeConfig.screenHeight * 0.04),
                 NoAccountText()
               ],
             ),

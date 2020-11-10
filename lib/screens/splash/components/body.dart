@@ -21,11 +21,11 @@ class _BodyState extends State<Body> {
     },
     {
       "image": "assets/images/spllash.png",
-      "text": "La solution à vos longues et interminable fil d'attente",
+      "text": "Souriez à la vie, c'est tellement simple",
     },
     {
       "image": "assets/images/spllash.png",
-      "text": "La solution à vos longues et interminable fil d'attente",
+      "text": "Passez le moins de temps possible à la banque",
     },
   ];
   @override

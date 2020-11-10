@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:queueland/components/custom_surfix_icon.dart';
 import 'package:queueland/components/default_button.dart';
 import 'package:queueland/components/form_error.dart';
-import 'package:queueland/screens/complete_profile/complete_profile_screen.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -16,6 +15,7 @@ class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   String email;
   String password;
+  String commune;
   String conformPassword;
   bool remember = false;
   final List<String> errors = [];
@@ -42,18 +42,19 @@ class _SignUpFormState extends State<SignUpForm> {
         children: [
           buildEmailFormField(),
           SizedBox(height: getProportionateScreenHeight(30)),
+          buildCommuneFormField(),
+          SizedBox(height: getProportionateScreenHeight(30)),
           buildPasswordFormField(),
           SizedBox(height: getProportionateScreenHeight(30)),
           buildConformPassFormField(),
           FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(40)),
           DefaultButton(
-            text: "Continue",
+            text: "Continuer",
             press: () {
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
-                // if all are valid then go to success screen
-                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+                // Navigator.pushNamed(context, CompleteProfileScreen.routeName);
               }
             },
           ),
@@ -85,12 +86,12 @@ class _SignUpFormState extends State<SignUpForm> {
         return null;
       },
       decoration: InputDecoration(
-        labelText: "Confirm Password",
-        hintText: "Re-enter your password",
+        labelText: "Confirmation",
+        hintText: "Confirmer le mot de passe",
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        // suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
     );
   }
@@ -118,12 +119,40 @@ class _SignUpFormState extends State<SignUpForm> {
         return null;
       },
       decoration: InputDecoration(
-        labelText: "Password",
-        hintText: "Enter your password",
+        labelText: "Mot de passe",
+        hintText: "Mot de passe",
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        // suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+      ),
+    );
+  }
+
+  TextFormField buildCommuneFormField() {
+    return TextFormField(
+      obscureText: true,
+      onSaved: (newValue) => commune = newValue,
+      onChanged: (value) {
+        if (value.isNotEmpty) {
+          removeError(error: kComNullError);
+        }
+        commune = value;
+      },
+      validator: (value) {
+        if (value.isEmpty) {
+          addError(error: kComNullError);
+          return "";
+        }
+        return null;
+      },
+      decoration: InputDecoration(
+        labelText: "Commune",
+        hintText: "Votre commune",
+        // If  you are using latest version of flutter then lable text and hint text shown like this
+        // if you r using flutter less then 1.20.* then maybe this is not working properly
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+        // suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
     );
   }
@@ -151,12 +180,12 @@ class _SignUpFormState extends State<SignUpForm> {
         return null;
       },
       decoration: InputDecoration(
-        labelText: "Email",
-        hintText: "Enter your email",
+        labelText: "Numero",
+        hintText: "Numero de téléphone",
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
+        // suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
       ),
     );
   }

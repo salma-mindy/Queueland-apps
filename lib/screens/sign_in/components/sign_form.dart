@@ -107,10 +107,10 @@ class _SignFormState extends State<SignForm> {
         return null;
       },
       decoration: InputDecoration(
-        labelText: "Password",
-        hintText: "Enter your password",
+        labelText: "Mot de passe",
+        hintText: "Votre mot de passe",
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        //  suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
     );
   }
@@ -122,8 +122,6 @@ class _SignFormState extends State<SignForm> {
       onChanged: (value) {
         if (value.isNotEmpty) {
           removeError(error: kEmailNullError);
-        } else if (emailValidatorRegExp.hasMatch(value)) {
-          removeError(error: kInvalidEmailError);
         }
         return null;
       },
@@ -131,17 +129,14 @@ class _SignFormState extends State<SignForm> {
         if (value.isEmpty) {
           addError(error: kEmailNullError);
           return "";
-        } else if (!emailValidatorRegExp.hasMatch(value)) {
-          addError(error: kInvalidEmailError);
-          return "";
         }
         return null;
       },
       decoration: InputDecoration(
-        labelText: "Email",
-        hintText: "Enter your email",
+        labelText: "N° de téléphone",
+        hintText: "Entez votre numero",
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
+        // suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/smartphone.svg"),
       ),
     );
   }
