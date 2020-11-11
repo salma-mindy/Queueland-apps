@@ -1,6 +1,7 @@
-# queueland-apps
+# Queueland-apps
 
 Application mobile pour les cliens finaux
+
 ## Les différents module
 
 #### Module 1
@@ -13,6 +14,12 @@ Application mobile pour les cliens finaux
 agences disponible dans sa localité
 
 #### Module 2
+
+* Navigation sur la carte pour choisir une
+agence
+* Creation de ticket
+* Paiement de ticket
+* Salle d'attente
 
 ## Quelques interface
 
