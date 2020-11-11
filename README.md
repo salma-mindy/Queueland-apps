@@ -1,16 +1,21 @@
-# queueland
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-A new Flutter project.
+# queueland-apps
 
-## Getting Started
+Application mobile pour les cliens finaux
+## Les différents module
 
-This project is a starting point for a Flutter application.
+#### Module 1
 
-A few resources to get you started if this is your first Flutter project:
+#### Module 2
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Quelques interface
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Slash screen
+
+[![Product Name Screen Shot][https://nsa40.casimages.com/img/2020/11/11/mini_2011110603549706.jpg]](https://nsa40.casimages.com/img/2020/11/11/mini_2011110603549706.jpg)
