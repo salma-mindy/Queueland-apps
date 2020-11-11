@@ -5,11 +5,11 @@ Application mobile pour les cliens finaux
 
 #### Module 1
 
-• Connexion
-• Inscription
-• Deconnexion
-• Rénitialisation de mot de passe
-• Localisation de l'utilisateur et affichage des
+* Connexion
+* Inscription
+* Deconnexion
+* Rénitialisation de mot de passe
+* Localisation de l'utilisateur et affichage des
 agences disponible dans sa localité
 
 #### Module 2
